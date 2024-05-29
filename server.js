@@ -7,10 +7,10 @@ const port = 3001;
 
 // MySQL connection
 const connection = mysql.createConnection({
-  host: 'sql104.infinityfree.com',
-  user: 'if0_36634095',
-  password: '0nhgUtOF9BkB',
-  database: 'if0_36634095_home_db'
+  host: 'ec2-13-56-238-35.us-west-1.compute.amazonaws.com',
+  user: 'judeoc',
+  password: 'J0@lmessS',
+  database: 'sazstay'
 });
 
 connection.connect(err => {
