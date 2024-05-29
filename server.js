@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const cors = require('cors');
 
 const app = express();
 const port = 3001;
@@ -30,6 +31,7 @@ connection.connect(err => {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 // Endpoint to get the latest properties or search results
 app.post('/api/properties', (req, res) => {
