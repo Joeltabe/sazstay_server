@@ -85,6 +85,15 @@ app.post('/api/properties', (req, res) => {
     res.json(results);
   });
 });
+// Endpoint to get all properties using GET request
+app.get('/api/properties', (req, res) => {
+  connection.query('SELECT * FROM property', (err, results) => {
+    if (err) {
+      return res.status(500).send(err);
+    }
+    res.json(results);
+  });
+});
 
 // Example route to get users
 app.get('/api/users', (req, res) => {
